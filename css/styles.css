@@ -17,7 +17,8 @@
      /* disposition verticale des sections header, main et footer */
      display: flex;
      flex-direction: column;
-     height: 100vh; /* 100% de la hauteur du viewport pour assurer la réactivité verticale */
+     height: 100vh;
+     /* 100% de la hauteur du viewport pour assurer la réactivité verticale */
      gap: var(--gap);
      padding: var(--gap);
 
@@ -43,7 +44,8 @@
          }
 
          .menuItem {
-             flex-grow: 1; /* taille adaptative */
+             flex-grow: 1;
+             /* taille adaptative */
              font-size: 0.60em;
              font-weight: bold;
              text-decoration: none;
@@ -57,8 +59,10 @@
      }
 
      .main {
-         flex: 1; /* permettre de le formatage flex du parent */
-         min-height: 10vh; /* hauteur minimum relative à la hauteur du viewport*/
+         flex: 1;
+         /* permettre de le formatage flex du parent */
+         min-height: 10vh;
+         /* hauteur minimum relative à la hauteur du viewport*/
 
          /* contrecarrer les styles de la classe page */
          border: none;
@@ -90,6 +94,13 @@
              margin-top: var(--gap);
          }
 
+         .ellipsis {
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;
+         }
+
+
          .left_Aside {
              flex: 1;
              min-width: 100px;
@@ -111,7 +122,8 @@
      }
  }
 
- .page>* { /* cibler tout les enfants enfant de l'éléments de classe page */
+ .page>* {
+     /* cibler tout les enfants enfant de l'éléments de classe page */
      background: lightgray;
      padding: var(--gap);
      border: 1px solid gray;
