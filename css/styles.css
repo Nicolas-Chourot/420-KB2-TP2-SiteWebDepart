@@ -18,7 +18,7 @@
      /* disposition verticale des sections header, main et footer */
      display: flex;
      flex-direction: column;
-     height: 100vh;
+     height: 100vh; /* 100% de la hauteur du viewport pour assurer la réactivité verticale */
      gap: var(--padding);
      padding: var(--padding);
 
