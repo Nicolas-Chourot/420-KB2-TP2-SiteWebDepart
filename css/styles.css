@@ -1,6 +1,6 @@
  /* Définition de constantes */
  :root {
-     --padding: 10px;
+     --gap: 10px;
      --border-radius: 10px;
      --scroolbar-with: 10px;
  }
@@ -18,8 +18,8 @@
      display: flex;
      flex-direction: column;
      height: 100vh; /* 100% de la hauteur du viewport pour assurer la réactivité verticale */
-     gap: var(--padding);
-     padding: var(--padding);
+     gap: var(--gap);
+     padding: var(--gap);
 
      .favicon {
          height: 32px;
@@ -68,7 +68,7 @@
          /* Alignement horizontal des éléments enfants */
          display: flex;
          flex-direction: row;
-         gap: var(--padding);
+         gap: var(--gap);
 
          .scrollSection {
              overflow-y: auto;
@@ -87,6 +87,7 @@
 
          .justifiedText {
              text-align: justify;
+             margin-top: var(--gap);
          }
 
          .left_Aside {
@@ -105,14 +106,14 @@
 
      .main>* {
          background: white;
-         padding: var(--padding);
+         padding: var(--gap);
          border: 1px solid gray;
      }
  }
 
  .page>* { /* cibler tout les enfants enfant de l'éléments de classe page */
      background: lightgray;
-     padding: var(--padding);
+     padding: var(--gap);
      border: 1px solid gray;
  }
 
@@ -122,7 +123,7 @@
      display: flex;
      flex-direction: column;
      text-align: center;
-     gap: var(--padding);
+     gap: var(--gap);
  }
 
  /* style pour formater les icones de classe font-awsome */
