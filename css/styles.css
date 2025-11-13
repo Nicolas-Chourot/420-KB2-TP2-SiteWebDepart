@@ -1,10 +1,3 @@
- /* Définition de constantes */
- :root {
-     --gap: 10px;
-     --border-radius: 10px;
-     --scroolbar-with: 10px;
- }
-
  /* Remettre à zéro les marges de tous éléments pour contrecarrer les valeurs par défaut prédéfinies du fureteur */
  * {
      margin: 0px;
@@ -51,6 +44,9 @@
              text-decoration: none;
              color: dodgerblue;
              border: none
+         }
+         .menuItem:hover {
+            color:black;
          }
 
          .selectedMenuItem {
