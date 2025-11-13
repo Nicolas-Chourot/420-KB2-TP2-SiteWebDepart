@@ -1,4 +1,3 @@
-|
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,65 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* approche avec grid-templare-area qui fonctionne bien horizontalement 
-           mais ne permet pas un ajustement vertical fiable 
-        */
         * {
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
         }
 
-        .grid-container {
-            margin-top: -20px;
-            /* bizarre !*/
+        .page {
             height: 100vh;
-            /* nécessaire pour ajustement vertical */
-            display: grid;
-            grid-template-areas:
-                "header header header"
-                "sidebar main main"
-                "footer footer footer";
+            display: flex;
+            flex-direction: column;
             gap: 10px;
         }
 
-        .grid-container>div {
+        .page>div {
             border: 1px solid gray;
         }
 
-        .header {
-            grid-area: header;
+        /* approche qui impose un nombre fixe de colonne */
+        .main {
+            flex: 1;
+            min-height: 10vh;
+            display: grid;
+            grid-template-columns: 100px auto 100px;
+            border: none;
+            gap: 10px;
         }
 
-        .sidebar {
-            grid-area: sidebar;
-            min-width: 120px;
+        .main>div {
+            border: 1px solid gray;
         }
 
-        .main-content {
-            grid-area: main;
-
-        }
-
-       
-        .footer {
-            grid-area: footer;
-            height: 80px;
+        .scrollSection {
+            overflow-y: auto;
         }
 
         .justifiedText {
             text-align: justify;
             margin-top: var(--gap);
         }
+
+        .header,
+        .footer {
+            padding: 10px;
+            height: 40px;
+            font-size: 1.5em;
+            font-weight: bolder;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="page">
-        <div class="grid-container">
-            <div class="header">Header</div>
+        <div class="header">Header</div>
+        <div class="main">
+
             <div class="sidebar">Sidebar</div>
-            <div class="main-content scrollSection">main
+            <div class="scrollSection justifiedText">main
                 <p class="justifiedText">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum autem quasi, a qui non voluptatibus
                     in
@@ -105,9 +105,11 @@
                     ipsum minima cupiditate iusto quis perferendis ipsa exercitationem unde minus est laborum eum cum!
                 </p>
             </div>
-            <div class="footer">footer</div>
+            <div class="sidebar">Sidebar</div>
         </div>
+        <div class="footer">footer</div>
     </div>
+
 </body>
 
 </html>
