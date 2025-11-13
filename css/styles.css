@@ -151,28 +151,29 @@
      color: blue;
  }
 
+ @media (min-width:500px) {
+     /*** classes pour l'apparence de la barre de défilement ***/
+     ::-webkit-scrollbar {
+         border-radius: var(--border-radius);
+         width: var(--scroolbar-with);
+     }
 
- /*** classes pour l'apparence de la barre de défilement ***/
- ::-webkit-scrollbar {
-     border-radius: var(--border-radius);
-     width: var(--scroolbar-with);
- }
+     ::-webkit-scrollbar-track {
+         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+         border-radius: var(--border-radius);
+     }
 
- ::-webkit-scrollbar-track {
-     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-     border-radius: var(--border-radius);
- }
+     ::-webkit-scrollbar-thumb {
+         border-radius: var(--border-radius);
+         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+     }
 
- ::-webkit-scrollbar-thumb {
-     border-radius: var(--border-radius);
-     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
- }
-
- .momo-trust-display-regular {
-     font-family: "Momo Trust Display", sans-serif;
-     font-weight: 400;
-     font-style: normal;
-     font-size: 1.8em;
+     .momo-trust-display-regular {
+         font-family: "Momo Trust Display", sans-serif;
+         font-weight: 400;
+         font-style: normal;
+         font-size: 1.8em;
+     }
  }
 
  .author {
